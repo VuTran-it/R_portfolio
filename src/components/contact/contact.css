@@ -1,0 +1,101 @@
+.container.contact_container{
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+}
+
+.contact_options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact_option{
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.contact_option:hover{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+}
+
+.contact_option-icon{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact_option a{
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+/* *************** FORM *************** */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.Inputbox {
+    position: relative;
+}
+.Inputbox input,
+.Inputbox textarea
+{
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary-variant);
+    resize: none;
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+.Inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 0.7rem;
+    pointer-events: none;
+    font-size: 0.65em;
+    color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 0.2em;
+}
+
+.Inputbox input:valid ~ span, 
+.Inputbox textarea:valid ~ span,
+.Inputbox input:focus ~ span,
+.Inputbox textarea:focus ~ span 
+{
+    color: var(--color-primary);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0.10px 5px;
+    background: var(--color-bg);
+    border-left: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
+}
+
+/* ******************** MEDIA QUERIES (MEDIUM)********************* */
+@media screen and (max-width:1024px){
+   .container.contact_container{
+       grid-template-columns: 1fr;
+       gap: 2rem;
+   }
+ }
+ 
+ /* ******************** MEDIA QUERIES (SMALL)********************* */
+ @media screen and (max-width:600px){
+    .container.contact_container{
+        width: var(--container-width-sm);
+    }
+ }
+ 
